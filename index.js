@@ -37,7 +37,6 @@ dateHTML.innerText = dateBuilder(new Date())
 // Fetching the current weather
 let city = 'Moscow'
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=f436e4b5d15102a31f8e0a37fb0fad3e`
-console.log(url)
 
 let degrees = document.getElementById('degrees')
 let cloudy = document.getElementById('cloudy')
@@ -48,7 +47,6 @@ const fetching = () => {
         .then((data) => {
             degrees.innerText = Math.round(data.main.temp) + ' °C'
             cloudy.innerText = data.weather['0'].main
-            console.log('fetch success')
         })
         .catch((err) => console.log(err))
 }
@@ -76,7 +74,6 @@ moscow.addEventListener('click', () => {
         .then((data) => {
             degrees.innerText = Math.round(data.main.temp) + ' °C'
             cloudy.innerText = data.weather['0'].main
-            console.log(data.main.temp)
         })
         .catch((err) => console.log(err))
 })
@@ -104,7 +101,6 @@ spb.addEventListener('click', () => {
         .then((data) => {
             degrees.innerText = Math.round(data.main.temp) + ' °C'
             cloudy.innerText = data.weather['0'].main
-            console.log(data.main.temp)
         })
         .catch((err) => console.log(err))
 })
