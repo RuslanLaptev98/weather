@@ -55,15 +55,15 @@ fetching()
 // Making the interface interactive and fetching each time the user changes the city
 let spb = document.getElementById('spb')
 let moscow = document.getElementById('moscow')
-spb.style.background = 'rgb(84, 110, 122, 0.8)'
-moscow.style.background = 'rgb(41, 67, 78, 0.8)'
+spb.style.background = 'rgba(84, 110, 122, 0.8)'
+moscow.style.background = 'rgba(41, 67, 78, 0.8)'
 
 // Moscow
 moscow.addEventListener('mouseover', () => {
     moscow.style.background = 'rgba(129, 156, 169, 0.8)'
 })
 moscow.addEventListener('click', () => {
-    spb.style.background = 'rgb(84, 110, 122, 0.8)'
+    spb.style.background = 'rgba(84, 110, 122, 0.8)'
     document.body.style.background =
         "url('./assets/moscow.jpg') no-repeat center fixed"
     document.body.style.backgroundSize = 'cover'
@@ -79,9 +79,9 @@ moscow.addEventListener('click', () => {
 })
 moscow.addEventListener('mouseout', () => {
     if (spb.style.background == 'rgba(84, 110, 122, 0.8)') {
-        moscow.style.background = 'rgb(41, 67, 78, 0.8)'
+        moscow.style.background = 'rgba(41, 67, 78, 0.8)'
     } else {
-        moscow.style.background = 'rgb(84, 110, 122, 0.8)'
+        moscow.style.background = 'rgba(84, 110, 122, 0.8)'
     }
 })
 
@@ -90,7 +90,7 @@ spb.addEventListener('mouseover', () => {
     spb.style.background = 'rgba(129, 156, 169, 0.8)'
 })
 spb.addEventListener('click', () => {
-    moscow.style.background = 'rgb(84, 110, 122, 0.8)'
+    moscow.style.background = 'rgba(84, 110, 122, 0.8)'
     document.body.style.background =
         "url('./assets/spb.jpg') no-repeat center fixed"
     document.body.style.backgroundSize = 'cover'
@@ -106,8 +106,8 @@ spb.addEventListener('click', () => {
 })
 spb.addEventListener('mouseout', () => {
     if (moscow.style.background == 'rgba(84, 110, 122, 0.8)') {
-        spb.style.background = 'rgb(41, 67, 78, 0.8)'
+        spb.style.background = 'rgba(41, 67, 78, 0.8)'
     } else {
-        spb.style.background = 'rgb(84, 110, 122, 0.8)'
+        spb.style.background = 'rgba(84, 110, 122, 0.8)'
     }
 })

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+$colors: (
+    primary: rgba(41, 67, 78, 0.8),
+    inactive: rgba(84, 110, 122, 0.8),
+    text: #fff,
+);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    background: url('../assets/moscow.jpg') no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.header {
+    width: 100%;
+    background: map-get($colors, primary);
+    color: map-get($colors, text);
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+
+    #{&}__title {
+        font-size: 2.25rem;
+        padding-top: 1rem;
+    }
+    #{&}__subtitle {
+        font-size: 1.5rem;
+        padding-bottom: 1.25rem;
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    width: 80%;
+    margin: auto;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: map-get($colors, text);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+
+    #{&}__item {
+        background: map-get($colors, primary);
+        border-radius: 0.625rem;
+    }
+    #{&}__moscow {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+    #{&}__spb {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        background: map-get($colors, inactive);
+    }
+    #{&}__degrees {
+        font-size: 3rem;
+        padding-top: 1.875rem;
+    }
+    #{&}__cloudy {
+        font-size: 2.25rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.875rem;
+    }
+    #{&}__weather {
+        grid-column: span 2;
+    }
+    #{&}__date {
+        grid-column: span 2;
+        padding-top: 1.875rem;
+        padding-bottom: 1.875rem;
+    }
+}
+
+.footer {
+    width: 100%;
+    background: map-get($colors, primary);
+    color: map-get($colors, text);
+    margin-top: auto;
+
+    #{&}__paragraph {
+        display: block;
+        padding-right: 1.875rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        text-align: right;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        font-size: 1.125rem;
+    }
+    #{&}__link {
+        text-decoration: none;
+        color: map-get($colors, text);
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        font-size: 1.125rem;
+    }
+    #{&}__icon {
+        margin-left: 0.5rem;
+        color: map-get($colors, text);
+        font-size: 1.25rem;
+    }
+}
